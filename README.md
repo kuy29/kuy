@@ -1,2 +1,66 @@
-# kuy
-kuy
+local player = game.Players.LocalPlayer
+local screenGui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+screenGui.Name = "FullUI"
+screenGui.ResetOnSpawn = false
+
+local frame = Instance.new("Frame")
+frame.Parent = screenGui
+frame.Size = UDim2.new(0, 400, 0, 280)
+frame.Position = UDim2.new(0.5, -200, 0.5, -140)
+frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+frame.BorderColor3 = Color3.fromRGB(255, 0, 0)
+frame.BorderSizePixel = 2
+frame.Active = true
+frame.Draggable = true
+
+local title = Instance.new("TextLabel")
+title.Parent = frame
+title.Size = UDim2.new(1, -20, 0, 30)
+title.Position = UDim2.new(0, 10, 0, 5)
+title.BackgroundTransparency = 1
+title.Text = "FE KUY GUI"
+title.TextColor3 = Color3.fromRGB(255, 0, 0)
+title.Font = Enum.Font.GothamBold
+title.TextSize = 22
+title.TextScaled = false
+title.TextXAlignment = Enum.TextXAlignment.Center
+
+local textBox = Instance.new("TextBox")
+textBox.Parent = frame
+textBox.Size = UDim2.new(1, -20, 0, 180)
+textBox.Position = UDim2.new(0, 10, 0, 40)
+textBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+textBox.TextColor3 = Color3.fromRGB(255, 0, 0)
+textBox.Font = Enum.Font.Gotham
+textBox.TextSize = 18
+textBox.ClearTextOnFocus = false
+textBox.BorderColor3 = Color3.fromRGB(255, 0, 0)
+textBox.BorderSizePixel = 2
+textBox.Text = ""
+textBox.TextWrapped = true
+textBox.TextYAlignment = Enum.TextYAlignment.Top
+textBox.TextXAlignment = Enum.TextXAlignment.Left
+
+local executeButton = Instance.new("TextButton")
+executeButton.Parent = frame
+executeButton.Size = UDim2.new(0.4, 0, 0, 40)
+executeButton.Position = UDim2.new(0.05, 0, 1, -50)
+executeButton.Text = "Execute"
+executeButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+executeButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+executeButton.Font = Enum.Font.GothamBold
+executeButton.TextSize = 20
+executeButton.BorderColor3 = Color3.fromRGB(255, 0, 0)
+executeButton.BorderSizePixel = 2
+
+local clearButton = Instance.new("TextButton")
+clearButton.Parent = frame
+clearButton.Size = UDim2.new(0.4, 0, 0, 40)
+clearButton.Position = UDim2.new(0.55, 0, 1, -50)
+clearButton.Text = "Clear"
+clearButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+clearButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+clearButton.Font = Enum.Font.GothamBold
+clearButton.TextSize = 20
+clearButton.BorderColor3 = Color3.fromRGB(255, 0, 0)
+clearButton.BorderSizePixel = 2
